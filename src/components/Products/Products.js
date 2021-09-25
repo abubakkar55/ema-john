@@ -1,5 +1,6 @@
 import React from 'react'
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaStar, FaRegStar as FareStar } from "react-icons/fa";
+import Rating from 'react-rating';
 
 const Products = (props) => {
     //console.log(props.product);
@@ -31,6 +32,13 @@ const Products = (props) => {
                     <div>
                         <h3>
 
+<Rating 
+  emptySymbol={ <FareStar />}
+  fullSymbol={<FaStar /> }
+readonly
+initialRating={star}
+
+/>
                         </h3>
                         <h3 className="text-2xl font-semibold">Features: </h3>
                         <ul>
