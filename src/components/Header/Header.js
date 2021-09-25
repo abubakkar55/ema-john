@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaShoppingCart } from "react-icons/fa";
 const  logo =  "images/logo.png";
-const Header = () => {
+const Header = (props) => {
     return (
         <div>
 <div className="header-container flex items-center justify-between px-20 h-20 bg-white shadow-md">
@@ -18,7 +18,7 @@ const Header = () => {
                 <li><a className="mr-10 font-semibold text-xl" href="/about">About </a></li>
                 <li><a className="mr-10 font-semibold text-xl" href="/products">Products </a></li>
                 <li><a className="mr-10 font-semibold text-xl" href="/contact">Contact us </a></li>
-                <li><a className="text-xl flex items-center" href="/"> <FaShoppingCart /> <span className="ml-2 text-yellow-400">0 </span>   </a></li>
+                <li><a className="text-xl flex items-center" href="/"> <FaShoppingCart /> <span className="ml-2 text-yellow-400"> {props.cart.length} </span>   </a></li>
             </ul>
         </nav>
     </div>
